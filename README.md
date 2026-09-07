@@ -13,7 +13,7 @@ Based in Croatia. Interested in remote AI automation, AI implementation, and jun
 | Project | What you can inspect | Status |
 | --- | --- | --- |
 | **[Automobili Galerija](case-studies/automobili-galerija.md)** | A dealership's public catalog and the product decisions behind its protected operational workflows | Live public website; application source is private |
-| **[Intake Eval](https://github.com/leonbede7/intake-eval)** | Runnable TypeScript, synthetic evaluation fixtures, schema validation, evidence checks, tests, and CI | Early public prototype; no live model integration |
+| **[Intake Eval](https://github.com/leonbede7/intake-eval)** | TypeScript validation, DeepSeek/Ollama adapters, tests, and a [live experiment with failure analysis](https://github.com/leonbede7/intake-eval/tree/main/docs/results/deepseek-2026-09-07) | Public prototype; 16-case DeepSeek development run published |
 | **[Pagewright](https://github.com/leonbede7/pagewright)** | Static landing-page templates, a free Lite template, and documentation | Public repository and [demo](https://leonbede7.github.io/pagewright/) |
 
 **Start with [Intake Eval](https://github.com/leonbede7/intake-eval)** for a small code sample you can run locally without credentials. Start with the [Galerija case study](case-studies/automobili-galerija.md) for business context and product scope.
@@ -28,6 +28,6 @@ Technologies used in these projects include TypeScript, Next.js, React, Tailwind
 
 ## What I am building next
 
-Extend Intake Eval with a live model adapter and independently labeled evaluation cases, then publish measured results and failure analysis. The current release establishes the deterministic validation boundary first.
+Intake Eval now includes a live model adapter and a published development experiment. The next step is independent label review and a held-out evaluation of the routing policy. The first run showed why correct model classification alone does not guarantee correct operational routing.
 
 For a conversation about remote AI implementation or product work, connect with me on [LinkedIn](https://www.linkedin.com/in/leon-bede).
