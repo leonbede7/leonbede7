@@ -195,9 +195,15 @@ for (const width of [390, 1366]) {
 }
 
 test("3D loads near the scene, pauses and survives context loss", async () => {
+  test.setTimeout(60000);
   const { chromium } = await import("@playwright/test");
   const browser = await chromium.launch({
-    args: ["--enable-unsafe-swiftshader"],
+    args: [
+      "--enable-unsafe-swiftshader",
+      "--use-gl=angle",
+      "--use-angle=swiftshader",
+      "--disable-dev-shm-usage",
+    ],
   });
   try {
     const page = await browser.newPage({
@@ -224,7 +230,9 @@ test("3D loads near the scene, pauses and survives context loss", async () => {
     ).toBeVisible();
     expect(sceneRequests).toEqual([]);
     await page.locator(".signal-stage").scrollIntoViewIfNeeded();
-    await expect(page.locator(".signal-stage")).toHaveClass(/scene-loaded/);
+    await expect(page.locator(".signal-stage")).toHaveClass(/scene-loaded/, {
+      timeout: 20000,
+    });
     expect(sceneRequests).toHaveLength(1);
     await expect
       .poll(() => page.evaluate(() => window.sceneDraws))

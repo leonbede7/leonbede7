@@ -23,13 +23,16 @@ createServer(async (req, res) => {
     ? path.slice("/leonbede7/".length)
     : "";
   if (
-    /^(assets|js)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|woff2|js|txt)$/.test(relative)
+    /^(assets|js)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|svg|woff2|js|txt)$/.test(
+      relative,
+    )
   ) {
     const extension = relative.split(".").at(-1);
     const types = {
       webp: "image/webp",
       jpg: "image/jpeg",
       png: "image/png",
+      svg: "image/svg+xml",
       woff2: "font/woff2",
       js: "text/javascript; charset=utf-8",
       txt: "text/plain; charset=utf-8",
