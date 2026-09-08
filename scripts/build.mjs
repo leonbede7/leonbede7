@@ -1,4 +1,5 @@
 import { build, transform } from "esbuild";
+import { buildProfile } from "./build-profile.mjs";
 import {
   mkdir,
   copyFile,
@@ -31,3 +32,5 @@ await writeFile("site/styles.css", css.code);
 for (const [path, details] of Object.entries(result.metafile.outputs))
   console.log(`${path}: ${(details.bytes / 1024).toFixed(1)} KiB`);
 console.log("Built static HTML, CSS and deferred motion modules.");
+await buildProfile();
+console.log("Built profile and verified its matching PDF.");

@@ -36,3 +36,13 @@ Browser tests cover five screen widths, WCAG A/AA automated checks, keyboard nav
 Local Lighthouse reports and section screenshots live in ignored `local-data/`. Lighthouse is a simulated lab run, not field Core Web Vitals. Recheck after changing images, animation timing or dependencies.
 
 Only `site/` is deployed. Keep credentials, local QA reports and private career materials out of that directory. Do not add inflated claims, fake metrics, skill ratings or em dashes.
+
+## Public profile and PDF
+
+The `/profile/` page offers a concise, text-based overview for hiring conversations. It contains project evidence, experience, tools and education, with a one-page PDF download. It loads no JavaScript. Links from the portfolio opening, contact section and GitHub README make it easy to find.
+
+`src/profile.json` is the shared source for the web page and PDF. Education is in progress; no graduation date is assumed. Contact uses Leon's public LinkedIn and GitHub links.
+
+To change the facts, edit the JSON and run `python scripts/build-profile-pdf.py` with ReportLab and pypdf installed. Inspect the exported PDF, then run `npm run build`. The PDF builder records the data and PDF hashes in `src/profile-pdf.json`; the website build rejects a stale or mismatched PDF. JSON uses LF line endings for consistent hashes across Windows and CI. CI verifies the committed PDF and builds the HTML without needing Python.
+
+The browser checks cover the profile at mobile and desktop widths, keyboard access, automated accessibility and actual PDF download with JavaScript disabled. The PDF was separately rendered and checked for a single page, readable text and working link annotations.

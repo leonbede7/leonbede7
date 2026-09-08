@@ -3,6 +3,8 @@ import { readFile } from "node:fs/promises";
 const files = new Map([
   ["/leonbede7/", ["index.html", "text/html; charset=utf-8"]],
   ["/leonbede7/styles.css", ["styles.css", "text/css; charset=utf-8"]],
+  ["/leonbede7/profile/", ["profile/index.html", "text/html; charset=utf-8"]],
+  ["/leonbede7/profile.css", ["profile.css", "text/css; charset=utf-8"]],
   [
     "/leonbede7/assets/intake-eval.jpg",
     ["assets/intake-eval.jpg", "image/jpeg"],
@@ -13,6 +15,11 @@ const files = new Map([
 ]);
 createServer(async (req, res) => {
   const path = new URL(req.url, "http://127.0.0.1:4318").pathname;
+  if (path === "/leonbede7/profile") {
+    res.writeHead(302, { Location: "/leonbede7/profile/" });
+    res.end();
+    return;
+  }
   if (path === "/" || path === "/leonbede7") {
     res.writeHead(302, { Location: "/leonbede7/" });
     res.end();
@@ -23,7 +30,7 @@ createServer(async (req, res) => {
     ? path.slice("/leonbede7/".length)
     : "";
   if (
-    /^(assets|js)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|svg|woff2|js|txt)$/.test(
+    /^(assets|js)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|svg|pdf|woff2|js|txt)$/.test(
       relative,
     )
   ) {
@@ -33,6 +40,7 @@ createServer(async (req, res) => {
       jpg: "image/jpeg",
       png: "image/png",
       svg: "image/svg+xml",
+      pdf: "application/pdf",
       woff2: "font/woff2",
       js: "text/javascript; charset=utf-8",
       txt: "text/plain; charset=utf-8",

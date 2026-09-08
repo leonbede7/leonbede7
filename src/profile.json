@@ -1,0 +1,91 @@
+{
+  "name": "Leon Bede",
+  "headline": "AI implementation & product development",
+  "location": "Croatia",
+  "workEligibility": "Croatian and EU work eligibility",
+  "focus": "Remote AI implementation, automation and junior product engineering roles",
+  "summary": "I turn dealership workflows into software with AI-assisted development. I define the requirements, direct implementation, review the results and test the behavior. My work combines practical business context with structured data, validation and human review.",
+  "links": [
+    { "label": "Portfolio", "url": "https://leonbede7.github.io/leonbede7/" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/leon-bede" },
+    { "label": "GitHub", "url": "https://github.com/leonbede7" }
+  ],
+  "projects": [
+    {
+      "name": "Automobili Galerija",
+      "status": "Live public product; application source is private",
+      "description": "Directed the design and AI-assisted delivery of a dealership platform. A shared vehicle record connects the public catalog with protected inventory, CRM, trade-in and publishing workflows. AI assists with vehicle-data extraction and reply drafts, followed by validation and human review.",
+      "stack": "Next.js, React, TypeScript, Supabase/Postgres, DeepSeek, Playwright",
+      "links": [
+        { "label": "Live product", "url": "https://automobili-galerija.hr/" },
+        {
+          "label": "Product decisions",
+          "url": "https://github.com/leonbede7/leonbede7/blob/main/case-studies/automobili-galerija.md"
+        }
+      ]
+    },
+    {
+      "name": "Intake Eval",
+      "status": "Public TypeScript experiment and browser playground",
+      "description": "Checks structured model responses and exact source quotes, then routes requests to human review. Compared two routing policies on 20 targeted synthetic cases: mismatches fell from five to zero. These are development results with AI-authored provisional labels, not general model accuracy.",
+      "stack": "TypeScript, DeepSeek, schema validation, automated tests",
+      "links": [
+        {
+          "label": "Try the playground",
+          "url": "https://leonbede7.github.io/intake-eval/"
+        },
+        {
+          "label": "Inspect the experiment",
+          "url": "https://github.com/leonbede7/intake-eval/blob/main/docs/routing-experiment.md"
+        }
+      ]
+    },
+    {
+      "name": "Pagewright",
+      "status": "Public design experiment",
+      "description": "Static landing-page templates exploring typography, structure and copy, with a free Lite version and documentation.",
+      "stack": "HTML, CSS, responsive design",
+      "links": [
+        {
+          "label": "View the repository",
+          "url": "https://github.com/leonbede7/pagewright"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "organization": "Automobili Galerija",
+      "role": "Business operations & AI product development",
+      "period": "2021-present",
+      "description": "Dealership operations experience informs the product requirements for inventory, inquiries, sales communication and publishing."
+    },
+    {
+      "organization": "Hrvatski Telekom",
+      "role": "Sales / Customer Service Agent",
+      "period": "Summer 2024",
+      "description": "Explained service options, handled customer needs and regularly exceeded individual sales targets."
+    }
+  ],
+  "skills": [
+    {
+      "label": "Product & AI",
+      "value": "Requirements, workflow design, prompt design, AI-assisted implementation, review and iteration"
+    },
+    {
+      "label": "Application & data",
+      "value": "TypeScript, React, Next.js, Tailwind CSS, Supabase/Postgres, APIs"
+    },
+    {
+      "label": "Quality & delivery",
+      "value": "Validation, human review, GitHub Actions, Playwright, accessibility checks, Vercel"
+    }
+  ],
+  "education": {
+    "institution": "FERIT Osijek",
+    "description": "Undergraduate Computing studies, Software Engineering track",
+    "status": "In progress"
+  },
+  "languages": "Croatian: native. English: working proficiency.",
+  "updated": "September 2026"
+}

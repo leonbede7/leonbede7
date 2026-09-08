@@ -239,6 +239,19 @@ nav a {
   margin-top: 24px;
   font-size: 18px;
 }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin-top: 24px;
+}
+.hero-actions .text-link {
+  margin-top: 0;
+}
+.hero-actions .profile-link {
+  font-size: 14px;
+}
 .hero-caption {
   position: absolute;
   bottom: 32px;
@@ -749,6 +762,7 @@ details[open] summary:after {
   text-shadow: 0 2px 20px var(--bg);
 }
 .contact-links {
+  flex-wrap: wrap;
   display: flex;
   gap: 40px;
   margin-top: 34px;
