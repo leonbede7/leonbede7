@@ -6,3 +6,4 @@ site/profile/index.html linguist-generated=true
 site/profile.css linguist-generated=true
 src/profile.json text eol=lf
 src/profile-pdf.json text eol=lf
+*.pdf binary
