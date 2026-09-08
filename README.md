@@ -6,7 +6,7 @@ I turn business workflows into working software with AI-assisted development. My
 
 Based in Croatia. Interested in remote AI automation, AI implementation, and junior product engineering roles.
 
-[LinkedIn](https://www.linkedin.com/in/leon-bede) · [GitHub](https://github.com/leonbede7)
+[Portfolio](https://leonbede7.github.io/leonbede7/) · [LinkedIn](https://www.linkedin.com/in/leon-bede) · [GitHub](https://github.com/leonbede7)
 
 ## Selected work
 

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leon Bede | AI implementation &amp; product development</title>
+    <meta
+      name="description"
+      content="Leon Bede's portfolio: AI support-triage evaluation, a dealership product, and public code. Based in Croatia, interested in remote AI implementation roles."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://leonbede7.github.io/leonbede7/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Leon Bede | AI implementation &amp; product development"
+    />
+    <meta
+      property="og:description"
+      content="Working projects, public code and documented decisions. Explore Leon Bede's AI implementation portfolio."
+    />
+    <meta property="og:url" content="https://leonbede7.github.io/leonbede7/" />
+    <meta
+      property="og:image"
+      content="https://leonbede7.github.io/leonbede7/assets/intake-eval.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Intake Eval, Leon Bede's interactive AI response validation project"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Leon Bede",
+        "url": "https://leonbede7.github.io/leonbede7/",
+        "sameAs": [
+          "https://github.com/leonbede7",
+          "https://www.linkedin.com/in/leon-bede"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="wrap masthead">
+      <a class="name" href="./" aria-label="Leon Bede, home"
+        >Leon Bede<span class="name-mark" aria-hidden="true">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#about">About</a
+        ><a href="#contact">Contact</a
+        ><a href="https://github.com/leonbede7">GitHub</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero" aria-labelledby="intro">
+        <div class="hero-copy">
+          <h1 id="intro">AI implementation &amp; product development.</h1>
+          <p>
+            I’m Leon Bede. I build and test AI-assisted products, drawing on
+            hands-on experience in dealership operations.
+          </p>
+          <a class="button" href="#work"
+            >Explore the work <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <figure class="hero-visual">
+          <a
+            href="https://leonbede7.github.io/intake-eval/"
+            aria-label="Open the Intake Eval playground"
+            ><img
+              src="assets/intake-eval.jpg"
+              width="1440"
+              height="1024"
+              fetchpriority="high"
+              alt="Intake Eval displaying a customer request, the model's JSON response and a standard human-review decision"
+          /></a>
+          <figcaption>
+            Intake Eval
+            <a href="https://leonbede7.github.io/intake-eval/"
+              >Open demo <span aria-hidden="true">↗</span></a
+            >
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="work" class="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected work</h2>
+        <article class="featured" aria-labelledby="intake-title">
+          <div>
+            <h3 id="intake-title">Intake Eval</h3>
+            <p class="project-type">
+              AI evaluation / Public TypeScript project
+            </p>
+            <p>
+              A support-triage prototype that checks model output, verifies
+              source quotes and routes candidates to human review.
+            </p>
+            <p>
+              I developed the prototype with Codex assistance, ran DeepSeek
+              experiments and documented where the first routing policy failed.
+            </p>
+            <div class="links">
+              <a href="https://github.com/leonbede7/intake-eval"
+                >Read the code</a
+              ><a
+                href="https://github.com/leonbede7/intake-eval/blob/main/docs/routing-experiment.md"
+                >Inspect the experiment</a
+              >
+            </div>
+          </div>
+          <div class="finding">
+            <p class="finding-title">What changed after testing</p>
+            <p class="finding-number">5 <span aria-hidden="true">→</span> 0</p>
+            <p>
+              Routing mismatches on 20 targeted synthetic cases, comparing
+              keyword rules with an explicit specialist-review reason.
+            </p>
+            <p class="note">
+              AI-authored, provisional labels. This is a development result, not
+              general model accuracy.
+            </p>
+          </div>
+          <details>
+            <summary>A useful failure to try yourself</summary>
+            <div class="detail-body">
+              <p>
+                Open the demo and select “No refund requested.” V1 escalates
+                because the text contains “refund.” V2 separates the request’s
+                meaning from urgency. Then change an evidence quote to text that
+                does not appear in the request: validation rejects it.
+              </p>
+              <p>
+                A real quote can still support the wrong conclusion. Summary
+                correctness and review reasons still need a person.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <article class="galerija" aria-labelledby="galerija-title">
+          <figure>
+            <img
+              src="assets/galerija.jpg"
+              width="1440"
+              height="1024"
+              loading="lazy"
+              alt="The public Automobili Galerija website showing its vehicle catalog and buying information"
+            />
+            <figcaption>
+              Public website. The operating application is private.
+            </figcaption>
+          </figure>
+          <div class="galerija-copy">
+            <h3 id="galerija-title">Automobili Galerija</h3>
+            <p class="project-type">Product ownership / Dealership workflows</p>
+            <p>
+              A public vehicle catalog with a protected back office for
+              inventory, inquiries and AI-assisted data preparation.
+            </p>
+            <p>
+              I supplied the dealership context, defined workflows and
+              acceptance criteria, and directed AI-assisted implementation. AI
+              generated much of the code.
+            </p>
+            <p class="note">
+              The public product is live. Time savings and sales impact have not
+              been measured.
+            </p>
+            <div class="links">
+              <a href="https://automobili-galerija.hr/">Visit the product</a
+              ><a
+                href="https://github.com/leonbede7/leonbede7/blob/main/case-studies/automobili-galerija.md"
+                >Read the case study</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="additional" aria-labelledby="pagewright-title">
+          <h3 id="pagewright-title">Pagewright</h3>
+          <p>
+            Static landing-page templates, including a free Lite template and
+            documentation.
+          </p>
+          <a href="https://github.com/leonbede7/pagewright"
+            >Explore the repository <span aria-hidden="true">↗</span></a
+          >
+        </article>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <h2 id="about-title">The work behind the code</h2>
+        <div class="about-body">
+          <p class="lead">
+            My starting point is the operating problem: what comes in, who
+            reviews it, and what happens next.
+          </p>
+          <p>
+            Dealership operations gave me practical context for inventory and
+            customer inquiries. Customer-facing experience at Hrvatski Telekom
+            informs how I clarify requirements and explain technical changes.
+          </p>
+          <p>
+            I use AI tools throughout development. My portfolio shows the
+            resulting implementation, the checks I ran and the decisions that
+            still need review.
+          </p>
+          <dl class="skills">
+            <div>
+              <dt>Product implementation</dt>
+              <dd>
+                Workflow definition, structured data, acceptance criteria and
+                human review.
+              </dd>
+            </div>
+            <div>
+              <dt>Tools used in these projects</dt>
+              <dd>
+                TypeScript, Next.js, React, Supabase/Postgres, APIs, GitHub
+                Actions and Playwright.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Interested in remote AI work.</h2>
+        <p>
+          Based in Croatia. Looking for AI implementation, automation or junior
+          product engineering roles where I can build, test and keep learning.
+        </p>
+        <a class="button" href="https://www.linkedin.com/in/leon-bede"
+          >Contact on LinkedIn <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="wrap footer">
+      <span>Leon Bede</span
+      ><a href="https://github.com/leonbede7/leonbede7">Portfolio source</a>
+    </footer>
+  </body>
+</html>
