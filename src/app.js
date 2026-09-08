@@ -34,7 +34,11 @@ function setupMotion() {
         : "Motion on. Pause decorative motion",
   );
   sceneControllers.forEach((controller) => controller.setPaused(paused));
-  if (paused) return;
+  if (paused) {
+    gsap.killTweensOf("#policy-result");
+    gsap.set("#policy-result", { clearProps: "opacity,transform" });
+    return;
+  }
   document
     .querySelectorAll("[data-scene]:not([data-scene-initialized])")
     .forEach((node) => observer?.observe(node));
@@ -211,8 +215,8 @@ document.querySelectorAll("[data-policy]").forEach((button) =>
     if (!pauseRequested())
       gsap.fromTo(
         result,
-        { y: 7, opacity: 0.5 },
-        { y: 0, opacity: 1, duration: 0.3, clearProps: "opacity,transform" },
+        { y: 7 },
+        { y: 0, duration: 0.3, clearProps: "transform" },
       );
   }),
 );

@@ -259,3 +259,23 @@ test("3D loads near the scene, pauses and survives context loss", async () => {
     await browser.close();
   }
 });
+
+test("changing motion preference during a policy response restores its readable state", async ({
+  page,
+}) => {
+  await page.goto(base);
+  await page
+    .getByRole("button", { name: "Explicit reason", exact: true })
+    .click();
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect(page.locator("#policy-result")).toHaveCSS("opacity", "1");
+  await expect(page.locator("#policy-result")).toHaveCSS("transform", "none");
+  await expect(page.locator(".decision-name")).toHaveText(
+    "Standard human review",
+  );
+  const audit = await new AxeBuilder({ page })
+    .include("#policy-result")
+    .withTags(["wcag2aa"])
+    .analyze();
+  expect(audit.violations).toEqual([]);
+});
