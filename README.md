@@ -30,6 +30,8 @@ Technologies used in these projects include TypeScript, Next.js, React, Tailwind
 
 Intake Eval now includes a browser playground and a measured policy change. On 20 targeted synthetic cases, routing errors fell from five to zero. This is a small development result on provisional labels. The next step is independent label review and evaluation on unseen cases, including summary correctness.
 
+The [failure lab](https://leonbede7.github.io/intake-eval/reliability.html) adds reproducible local HTTP faults. It found a corrupt UTF-8 response that passed through permissive decoding; the adapter now rejects it. The report separates 14 contract checks from a known limitation: a false summary can still contain a real source quote. [Before/after evidence](https://github.com/leonbede7/intake-eval/blob/main/docs/reliability.md).
+
 For a conversation about remote AI implementation or product work, connect with me on [LinkedIn](https://www.linkedin.com/in/leon-bede).
 
 ## This portfolio
