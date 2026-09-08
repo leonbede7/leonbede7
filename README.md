@@ -13,10 +13,10 @@ Based in Croatia. Interested in remote AI automation, AI implementation, and jun
 | Project | What you can inspect | Status |
 | --- | --- | --- |
 | **[Automobili Galerija](case-studies/automobili-galerija.md)** | A dealership's public catalog and the product decisions behind its protected operational workflows | Live public website; application source is private |
-| **[Intake Eval](https://github.com/leonbede7/intake-eval)** | TypeScript validation, DeepSeek/Ollama adapters, tests, and a [live experiment with failure analysis](https://github.com/leonbede7/intake-eval/tree/main/docs/results/deepseek-2026-09-07) | Public prototype; 16-case DeepSeek development run published |
+| **[Intake Eval](https://leonbede7.github.io/intake-eval/)** | Interactive response validation, two routing policies, and [published DeepSeek results](https://github.com/leonbede7/intake-eval/blob/main/docs/routing-experiment.md) | Public playground and TypeScript source; 20-case development comparison |
 | **[Pagewright](https://github.com/leonbede7/pagewright)** | Static landing-page templates, a free Lite template, and documentation | Public repository and [demo](https://leonbede7.github.io/pagewright/) |
 
-**Start with [Intake Eval](https://github.com/leonbede7/intake-eval)** for a small code sample you can run locally without credentials. Start with the [Galerija case study](case-studies/automobili-galerija.md) for business context and product scope.
+**Try [Intake Eval in your browser](https://leonbede7.github.io/intake-eval/)** to inspect saved model responses, change their evidence, and compare routing decisions. The [source](https://github.com/leonbede7/intake-eval) also runs locally without credentials. Start with the [Galerija case study](case-studies/automobili-galerija.md) for business context and product scope.
 
 ## How I work
 
@@ -28,6 +28,6 @@ Technologies used in these projects include TypeScript, Next.js, React, Tailwind
 
 ## What I am building next
 
-Intake Eval now includes a live model adapter and a published development experiment. The next step is independent label review and a held-out evaluation of the routing policy. The first run showed why correct model classification alone does not guarantee correct operational routing.
+Intake Eval now includes a browser playground and a measured policy change. On 20 targeted synthetic cases, routing errors fell from five to zero. This is a small development result on provisional labels. The next step is independent label review and evaluation on unseen cases, including summary correctness.
 
 For a conversation about remote AI implementation or product work, connect with me on [LinkedIn](https://www.linkedin.com/in/leon-bede).
