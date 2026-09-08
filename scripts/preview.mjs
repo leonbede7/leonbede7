@@ -18,7 +18,24 @@ createServer(async (req, res) => {
     res.end();
     return;
   }
-  const asset = files.get(path);
+  let asset = files.get(path);
+  const relative = path.startsWith("/leonbede7/")
+    ? path.slice("/leonbede7/".length)
+    : "";
+  if (
+    /^(assets|js)\/[a-zA-Z0-9_-]+\.(webp|jpg|png|woff2|js|txt)$/.test(relative)
+  ) {
+    const extension = relative.split(".").at(-1);
+    const types = {
+      webp: "image/webp",
+      jpg: "image/jpeg",
+      png: "image/png",
+      woff2: "font/woff2",
+      js: "text/javascript; charset=utf-8",
+      txt: "text/plain; charset=utf-8",
+    };
+    asset = [relative, types[extension]];
+  }
   try {
     const data = await readFile(
       new URL("../site/" + (asset?.[0] ?? "404.html"), import.meta.url),

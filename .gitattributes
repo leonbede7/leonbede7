@@ -1,0 +1,4 @@
+# Generated bundles include unmodified upstream GLSL template strings.
+site/js/*.js -whitespace linguist-generated=true
+site/styles.css linguist-generated=true
+site/index.html linguist-generated=true

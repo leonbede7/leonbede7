@@ -4,6 +4,12 @@
 
 [Visit the public product](https://automobili-galerija.hr/) · [Back to portfolio](../README.md)
 
+## Why this project
+
+My dad has always worked with cars and owns a dealership. I grew up around that world and inherited the same interest. As a programming student, I was also fascinated by AI and what it could make possible.
+
+Galerija brought those interests together. Building it taught me about product design, functionality, CRM and security through the needs of a real business. The part I am proudest of is having a practical reason to build: making the dealership's everyday work easier to manage and improve.
+
 ## The problem
 
 A small used-car dealership handles inventory, inquiries, trade-ins, pricing context, and marketplace publication. Vehicle information arrives in reports, advertisements, and notes. The same facts need to be structured, checked, and reused across different workflows.
