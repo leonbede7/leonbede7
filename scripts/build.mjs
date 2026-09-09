@@ -34,3 +34,11 @@ for (const [path, details] of Object.entries(result.metafile.outputs))
 console.log("Built static HTML, CSS and deferred motion modules.");
 await buildProfile();
 console.log("Built profile and verified its matching PDF.");
+await mkdir("site/work/galerija", { recursive: true });
+await copyFile("src/galerija.html", "site/work/galerija/index.html");
+const caseCss = await transform(await readFile("src/case-study.css", "utf8"), {
+  loader: "css",
+  minify: true,
+});
+await writeFile("site/case-study.css", caseCss.code);
+console.log("Built the Galerija product case study.");

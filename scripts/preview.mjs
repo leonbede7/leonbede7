@@ -6,6 +6,11 @@ const files = new Map([
   ["/leonbede7/profile/", ["profile/index.html", "text/html; charset=utf-8"]],
   ["/leonbede7/profile.css", ["profile.css", "text/css; charset=utf-8"]],
   [
+    "/leonbede7/work/galerija/",
+    ["work/galerija/index.html", "text/html; charset=utf-8"],
+  ],
+  ["/leonbede7/case-study.css", ["case-study.css", "text/css; charset=utf-8"]],
+  [
     "/leonbede7/assets/intake-eval.jpg",
     ["assets/intake-eval.jpg", "image/jpeg"],
   ],
@@ -15,6 +20,11 @@ const files = new Map([
 ]);
 createServer(async (req, res) => {
   const path = new URL(req.url, "http://127.0.0.1:4318").pathname;
+  if (path === "/leonbede7/work/galerija") {
+    res.writeHead(302, { Location: "/leonbede7/work/galerija/" });
+    res.end();
+    return;
+  }
   if (path === "/leonbede7/profile") {
     res.writeHead(302, { Location: "/leonbede7/profile/" });
     res.end();

@@ -1,5 +1,13 @@
 # A road through the work
 
+## Galerija case-study extension
+
+The standalone `/work/galerija/` page preserves the portfolio's graphite, ivory, vermilion and self-hosted Manrope. Reading this as a product case study for hiring managers: an editorial extension of the existing portfolio, using native HTML and CSS. DESIGN_VARIANCE 6, MOTION_INTENSITY 1, VISUAL_DENSITY 4. The page concentrates on reading and inspectable product evidence; its disclosures work without JavaScript.
+
+The existing homepage already covers the story and core decisions, but its detailed case-study link left the portfolio for Markdown. The extension keeps that written source available and adds a direct reading path with public catalog and trade-in screenshots. Existing routes, navigation labels and anchor IDs remain intact. All corners are square; borders group the conceptual data flow and access boundary. No new imagery, animation dependency or private admin mockup is introduced. Screenshots retain capture dates and provenance.
+
+Validation: narrow and desktop layouts, no-JavaScript navigation, disclosure keyboard operation, image loading, automated accessibility checks and existing portfolio regression coverage. Business outcomes remain unmeasured, and the conceptual diagram is labeled separately from product screenshots.
+
 ## Brief and evidence
 
 Full visual overhaul requested on 8 September 2026. The original light portfolio was readable and fast but treated three projects as a list. The new composition makes Automobili Galerija the main story, relates Intake Eval to the validation questions that arose from it, and keeps Pagewright as a smaller design experiment. Existing URLs and the Work, About and Contact anchors remain.

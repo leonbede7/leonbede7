@@ -4,6 +4,8 @@
 
 [Visit the public product](https://automobili-galerija.hr/) · [Back to portfolio](../README.md)
 
+[Read the visual case study](https://leonbede7.github.io/leonbede7/work/galerija/) for public product screenshots, a conceptual data flow and the decisions behind the interface.
+
 ## Why this project
 
 My dad has always worked with cars and owns a dealership. I grew up around that world and inherited the same interest. As a programming student, I was also fascinated by AI and what it could make possible.

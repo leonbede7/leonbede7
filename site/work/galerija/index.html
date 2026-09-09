@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automobili Galerija | A product case study by Leon Bede</title>
+    <meta
+      name="description"
+      content="How Leon Bede shaped a dealership platform around shared vehicle data, a public catalog and reviewed AI output. Product decisions, contribution and evidence."
+    />
+    <meta name="theme-color" content="#101110" />
+    <link
+      rel="canonical"
+      href="https://leonbede7.github.io/leonbede7/work/galerija/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Automobili Galerija | Leon Bede" />
+    <meta
+      property="og:description"
+      content="A dealership platform built around the work behind a vehicle listing. Explore the product, decisions and AI-assisted development process."
+    />
+    <meta
+      property="og:url"
+      content="https://leonbede7.github.io/leonbede7/work/galerija/"
+    />
+    <meta
+      property="og:image"
+      content="https://leonbede7.github.io/leonbede7/assets/galerija.jpg"
+    />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../../assets/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../../case-study.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to case study</a>
+    <header class="topbar shell">
+      <a class="wordmark" href="../../"
+        >Leon Bede<span aria-hidden="true"> /</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="../../#work">Work</a
+        ><a href="../../profile/">Experience &amp; PDF</a
+        ><a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero shell" aria-labelledby="title">
+        <p class="eyebrow">Product case study</p>
+        <h1 id="title">Automobili<br />Galerija.</h1>
+        <div class="hero-bottom">
+          <p>
+            A dealership platform connecting vehicle records, a public catalog
+            and protected daily operations.
+          </p>
+          <a class="action" href="https://automobili-galerija.hr/"
+            >Visit live product <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <figure class="product-hero shell">
+        <a
+          href="https://automobili-galerija.hr/ponuda"
+          aria-label="Open the live vehicle catalog"
+          ><img
+            src="../../assets/catalog.webp"
+            srcset="
+              ../../assets/catalog-768.webp  768w,
+              ../../assets/catalog.webp     1440w
+            "
+            sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1440px) 92vw, 1280px"
+            width="1440"
+            height="1000"
+            fetchpriority="high"
+            alt="Galerija's public vehicle catalog with search filters and vehicle listings"
+        /></a>
+        <figcaption>
+          Public catalog, captured 8 September 2026. This is a product snapshot,
+          not current inventory.
+        </figcaption>
+      </figure>
+      <div class="project-facts shell">
+        <dl>
+          <div>
+            <dt>My role</dt>
+            <dd>
+              Product direction, workflows, design review and AI-assisted
+              delivery
+            </dd>
+          </div>
+          <div>
+            <dt>Product</dt>
+            <dd>Live public website with protected operational workflows</dd>
+          </div>
+          <div>
+            <dt>Core stack</dt>
+            <dd>Next.js · React · TypeScript · Supabase/Postgres · DeepSeek</dd>
+          </div>
+        </dl>
+      </div>
+      <nav class="contents shell" aria-label="Case study sections">
+        <a href="#context">Context</a><a href="#system">The system</a
+        ><a href="#decisions">Decisions</a
+        ><a href="#evidence">Evidence &amp; limits</a>
+      </nav>
+      <section
+        class="story section shell"
+        id="context"
+        aria-labelledby="context-title"
+      >
+        <h2 id="context-title">
+          I knew the business<br />before building the software.
+        </h2>
+        <div class="story-columns">
+          <p class="lead">
+            My dad owns a dealership. I grew up around cars, and that interest
+            stayed with me as I started studying programming.
+          </p>
+          <div>
+            <p>
+              AI caught my attention early. Galerija gave me a concrete place to
+              explore it: vehicle information, customer questions and the daily
+              work of a dealership.
+            </p>
+            <p>
+              A listing is only one part of that work. Inventory, inquiries,
+              trade-ins and publishing need the same vehicle facts. I shaped the
+              product around a central record so those workflows could connect.
+            </p>
+          </div>
+        </div>
+        <aside class="contribution">
+          <h3>What I contributed</h3>
+          <p>
+            I supplied the business context, defined workflows and acceptance
+            criteria, directed AI-assisted implementation, reviewed behavior and
+            iterated on usability. AI generated much of the implementation. My
+            contribution is the product direction and the work of turning those
+            pieces into a usable system.
+          </p>
+        </aside>
+      </section>
+      <section
+        class="system section shell"
+        id="system"
+        aria-labelledby="system-title"
+      >
+        <h2 id="system-title">
+          One vehicle record.<br />Several connected workflows.
+        </h2>
+        <p class="section-lede">
+          Information arrives in reports, listings and notes. The useful step is
+          turning it into structured data that a person can check and reuse.
+        </p>
+        <figure class="flow-figure">
+          <ol
+            class="data-flow"
+            aria-label="Conceptual vehicle preparation flow"
+          >
+            <li>
+              <span class="flow-step">Input</span
+              ><strong>Reports &amp; listings</strong>
+              <p>Vehicle information from different sources.</p>
+            </li>
+            <li>
+              <span class="flow-step">Assistance</span
+              ><strong>AI candidate</strong>
+              <p>Extracted fields and draft content.</p>
+            </li>
+            <li class="review-gate">
+              <span class="flow-step">Decision point</span
+              ><strong>Validation &amp; review</strong>
+              <p>Check the candidate before relying on it.</p>
+            </li>
+            <li>
+              <span class="flow-step">Shared data</span
+              ><strong>Vehicle record</strong>
+              <p>Structured information for connected workflows.</p>
+            </li>
+          </ol>
+          <figcaption>
+            Conceptual product flow. This is not a database schema or a
+            screenshot of the private admin area.
+          </figcaption>
+        </figure>
+        <div class="access-boundary">
+          <div>
+            <h3>Public buying experience</h3>
+            <p>
+              Catalog, filters, vehicle details, comparison and saved vehicles.
+              Inquiry and trade-in forms provide entry points for customers.
+            </p>
+            <a href="https://automobili-galerija.hr/ponuda"
+              >Open the live vehicle catalog
+              <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div>
+            <h3>Protected operations</h3>
+            <p>
+              Inventory preparation, CRM, trade-ins, reply drafts, pricing
+              context and feed generation. Internal records require controlled
+              access.
+            </p>
+            <p class="small">
+              The case study describes these capabilities without exposing
+              customer records or application source.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section shell"
+        id="decisions"
+        aria-labelledby="decisions-title"
+      >
+        <h2 id="decisions-title">The choices behind<br />the interface.</h2>
+        <p class="section-lede">
+          The business problem determined the structure. These are the decisions
+          I would start with when explaining the project.
+        </p>
+        <div class="decision-list">
+          <details open>
+            <summary>
+              Keep public browsing and operating access separate.
+            </summary>
+            <div class="decision-body">
+              <p>
+                <strong>The need.</strong> Customers need to explore vehicles.
+                Staff need to change business records and handle customer
+                information.
+              </p>
+              <p>
+                <strong>The decision.</strong> Separate the public experience
+                from protected operations, supported by authentication,
+                data-access policies and input validation.
+              </p>
+              <p>
+                <strong>The trade-off.</strong> Access rules and testing add
+                work, but an admin screen alone is not an access boundary. The
+                data layer has to enforce the distinction.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Use AI for candidates and drafts.</summary>
+            <div class="decision-body">
+              <p>
+                <strong>The need.</strong> Vehicle information must be
+                structured, and replies need relevant inquiry and vehicle
+                context.
+              </p>
+              <p>
+                <strong>The decision.</strong> Use AI to assist extraction and
+                drafting, with validation and human review before an operating
+                decision.
+              </p>
+              <p>
+                <strong>The trade-off.</strong> Keeping a person in the process
+                adds a review step. It also keeps a plausible response from
+                becoming an unchecked business record or outgoing message.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Reuse structured data across workflows.</summary>
+            <div class="decision-body">
+              <p>
+                <strong>The need.</strong> Inventory, listing content and
+                marketplace feeds refer to the same vehicles.
+              </p>
+              <p>
+                <strong>The decision.</strong> Build around shared vehicle data
+                instead of treating each output as a separate copy to maintain.
+              </p>
+              <p>
+                <strong>The trade-off.</strong> Incorrect data can affect
+                several outputs. The central record therefore makes review more
+                important, not optional. Reduced re-entry is an intended
+                benefit, not a measured result.
+              </p>
+            </div>
+          </details>
+        </div>
+        <figure class="trade-in">
+          <div class="trade-in-caption">
+            <h3>A customer entry point<br />for an operating workflow.</h3>
+            <p>
+              The public trade-in page explains the process and collects an
+              inquiry. The resulting operational records stay private.
+            </p>
+            <a href="https://automobili-galerija.hr/otkup"
+              >Open the live trade-in page <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <a
+            href="https://automobili-galerija.hr/otkup"
+            aria-label="Open the live trade-in page"
+            ><img
+              src="../../assets/trade-in.webp"
+              srcset="
+                ../../assets/trade-in-768.webp  768w,
+                ../../assets/trade-in.webp     1440w
+              "
+              sizes="(max-width: 767px) calc(100vw - 40px), 60vw"
+              width="1440"
+              height="1000"
+              loading="lazy"
+              alt="Galerija's public trade-in page explaining its three-step process"
+          /></a>
+          <figcaption>
+            Public trade-in page, captured 8 September 2026. No private CRM or
+            customer data is shown.
+          </figcaption>
+        </figure>
+      </section>
+      <section
+        class="evidence section shell"
+        id="evidence"
+        aria-labelledby="evidence-title"
+      >
+        <h2 id="evidence-title">What you can verify.</h2>
+        <div class="evidence-grid">
+          <div>
+            <h3>The public product</h3>
+            <p>
+              The catalog and trade-in entry points can be inspected directly.
+              The screenshots above document their public appearance on the
+              capture date.
+            </p>
+            <p>
+              The application is proprietary. Descriptions of protected
+              capabilities come from project documentation reviewed privately,
+              rather than a public code audit.
+            </p>
+          </div>
+          <div>
+            <h3>The limits of this case study</h3>
+            <p>
+              I do not yet have measured time savings, sales uplift or
+              lead-conversion results. Those are outcomes to measure, not
+              numbers to infer from a finished interface.
+            </p>
+            <p>
+              Feed generation does not establish that every marketplace is
+              connected. External onboarding and active distribution are
+              separate dependencies.
+            </p>
+          </div>
+        </div>
+        <div class="next-measurement">
+          <h3>What I would measure next</h3>
+          <p>
+            Time from source information to a reviewed listing, the share of
+            extracted fields corrected during review, and time to a first
+            inquiry response. Each needs a defined baseline before I can claim
+            an improvement.
+          </p>
+        </div>
+      </section>
+      <section class="related shell" aria-labelledby="related-title">
+        <p class="eyebrow">Related public project</p>
+        <h2 id="related-title">Testing the boundary<br />around AI output.</h2>
+        <p>
+          Intake Eval explores that question in a separate, inspectable
+          implementation: structured responses, exact quotes, failure handling
+          and human review. It uses synthetic support cases, with no copied
+          dealership code or records.
+        </p>
+        <a class="action" href="https://leonbede7.github.io/intake-eval/"
+          >Explore Intake Eval <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="footer shell">
+      <a href="../../">Back to portfolio</a
+      ><a href="../../profile/">Experience &amp; PDF</a
+      ><a
+        href="https://github.com/leonbede7/leonbede7/blob/main/case-studies/automobili-galerija.md"
+        >Written project notes</a
+      >
+    </footer>
+  </body>
+</html>
