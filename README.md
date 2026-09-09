@@ -32,6 +32,8 @@ Intake Eval now includes a browser playground and a measured policy change. On 2
 
 The [failure lab](https://leonbede7.github.io/intake-eval/reliability.html) adds reproducible local HTTP faults. It found a corrupt UTF-8 response that passed through permissive decoding; the adapter now rejects it. The report separates 14 contract checks from a known limitation: a false summary can still contain a real source quote. [Before/after evidence](https://github.com/leonbede7/intake-eval/blob/main/docs/reliability.md).
 
+The [human review workspace](https://leonbede7.github.io/intake-eval/review.html) makes the next step inspectable: assess the request before revealing the model, judge summary accuracy, and record a decision. It preserves initial assessments and revision history, with local saving and JSON export. Reviews start empty; no independent human evaluation is claimed.
+
 For a conversation about remote AI implementation or product work, connect with me on [LinkedIn](https://www.linkedin.com/in/leon-bede).
 
 ## This portfolio
