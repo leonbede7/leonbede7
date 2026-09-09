@@ -5,6 +5,10 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    container:
+      # Keep this version aligned with @playwright/test in package.json.
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+      options: --user 1001
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -13,7 +17,6 @@ jobs:
           node-version: "24"
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
       - run: npm test
       - uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

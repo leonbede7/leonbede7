@@ -46,3 +46,8 @@ The `/profile/` page offers a concise, text-based overview for hiring conversati
 To change the facts, edit the JSON and run `python scripts/build-profile-pdf.py` with ReportLab and pypdf installed. Inspect the exported PDF, then run `npm run build`. The PDF builder records the data and PDF hashes in `src/profile-pdf.json`; the website build rejects a stale or mismatched PDF. JSON uses LF line endings for consistent hashes across Windows and CI. CI verifies the committed PDF and builds the HTML without needing Python.
 
 The browser checks cover the profile at mobile and desktop widths, keyboard access, automated accessibility and actual PDF download with JavaScript disabled. The PDF was separately rendered and checked for a single page, readable text and working link annotations.
+# Browser test environment
+
+GitHub Actions runs the full portfolio test suite in the official `mcr.microsoft.com/playwright:v1.63.0-noble` container, matching the pinned `@playwright/test` dependency. The image includes browser binaries and system dependencies; `npm ci` still installs the project's locked packages. Keep the image version aligned when upgrading Playwright. Local testing remains `npm test` with an installed Playwright Chromium browser.
+
+This replaced per-run system-package installation after two 9 September 2026 CI attempts failed on a Google Chrome apt repository hash mismatch before tests could start. Package integrity checks were not disabled and test coverage was not reduced. See the [official Playwright container CI configuration](https://playwright.dev/docs/ci#via-containers).
