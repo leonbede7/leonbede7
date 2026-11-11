@@ -1,40 +1,29 @@
-name: Check and publish portfolio
-on: [push, pull_request, workflow_dispatch]
+name: Publish redirects
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    container:
-      # Keep this version aligned with @playwright/test in package.json.
-      image: mcr.microsoft.com/playwright:v1.63.0-noble
-      options: --user 1001
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - uses: actions/upload-pages-artifact@v4
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        with:
-          path: site
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: check
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    concurrency:
-      group: pages
-      cancel-in-progress: false
     steps:
-      - uses: actions/deploy-pages@v4
-        id: deployment
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

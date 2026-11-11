@@ -1,41 +1,26 @@
 # Leon Bede
 
-### AI automation · Product implementation · TypeScript
+### AI product engineer
 
-I turn business workflows into working software with AI-assisted development. My focus is the practical boundary between generated output and a usable product: clear requirements, structured data, validation, human review, and reproducible checks.
+I design AI products around real business work and ship them by directing fleets of coding agents, with the evaluation, tests and review that make agent-written code safe to rely on.
 
-Based in Croatia. Interested in remote AI automation, AI implementation, and junior product engineering roles.
+Based in Croatia. Available for full-time remote work, with Croatian and EU work eligibility.
 
-[Portfolio](https://leonbede7.github.io/leonbede7/) · [Experience & PDF](https://leonbede7.github.io/leonbede7/profile/) · [LinkedIn](https://www.linkedin.com/in/leon-bede) · [GitHub](https://github.com/leonbede7)
+[Portfolio](https://leonbede7.github.io/) · [CV](https://leonbede7.github.io/cv/) · [LinkedIn](https://www.linkedin.com/in/leon-bede) · [Email](mailto:leon.bede@gmail.com)
 
-## Selected work
+## What I have built
 
-| Project                                                        | What you can inspect                                                                                                                                                   | Status                                                                  |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **[Automobili Galerija](https://leonbede7.github.io/leonbede7/work/galerija/)** | A dealership's public catalog and the product decisions behind its protected operational workflows                                                                     | Live public website; application source is private                      |
-| **[Intake Eval](https://leonbede7.github.io/intake-eval/)**    | Interactive response validation, two routing policies, and [published DeepSeek results](https://github.com/leonbede7/intake-eval/blob/main/docs/routing-experiment.md) | Public playground and TypeScript source; 20-case development comparison |
-| **[Pagewright](https://github.com/leonbede7/pagewright)**      | Static landing-page templates, a free Lite template, and documentation                                                                                                 | Public repository and [demo](https://leonbede7.github.io/pagewright/)   |
-
-**Try [Intake Eval in your browser](https://leonbede7.github.io/intake-eval/)** to inspect saved model responses, change their evidence, and compare routing decisions. The [source](https://github.com/leonbede7/intake-eval) also runs locally without credentials. Start with the [Galerija case study](https://leonbede7.github.io/leonbede7/work/galerija/) for business context and product scope.
+| Project | What it is | Status |
+| --- | --- | --- |
+| **[Kokpit](https://leonbede7.github.io/work/kokpit/)** | A platform that runs a car dealership from one vehicle record. One core, a separate installation for each dealership. | Live on three sites; source is private |
+| **[The assistant](https://leonbede7.github.io/work/assistant/)** | A tool-calling agent inside Kokpit that proposes changes and waits for a person to confirm. 104 of 105 on its live evaluation. | Live |
+| **[Showroom](https://leonbede7.github.io/work/showroom/)** | An AI photo studio that turns a phone photo of a car into a studio shot and changes only the background. | In development |
+| **[Automobili Galerija](https://leonbede7.github.io/work/galerija/)** | The live site and back office of my family's dealership, where all of this started. | Live |
+| **[Intake Eval](https://github.com/leonbede7/intake-eval)** | A TypeScript harness for checking what software can actually verify in a model's answer. | Public, with a [playground](https://leonbede7.github.io/intake-eval/) |
+| **[Potez](https://github.com/leonbede7/potez)** | A local-first chess opening trainer. | Public, with a [demo](https://leonbede7.github.io/potez/) |
 
 ## How I work
 
-I start with the operating problem, define the data and acceptance criteria, use AI tools to help implement the solution, and work through review, testing, and iteration. I describe AI assistance openly and separate implemented capabilities from measured outcomes.
+AI agents write the code. I decide what gets built, specify it precisely enough to build, review the result and refuse to sign off until it holds: about 12,000 automated tests on Kokpit, an evaluation set for the assistant that runs on every commit, a second model reviewing the first, and a person confirming every change the assistant proposes.
 
-My dealership work gives me direct context for inventory, customer inquiries, publishing, and sales workflows. Customer-facing experience at Hrvatski Telekom also informs how I explain technical changes and clarify requirements.
-
-Technologies used in these projects include TypeScript, Next.js, React, Tailwind CSS, Supabase/Postgres, APIs, GitHub Actions, and Playwright. The repositories and case studies show where each is used.
-
-## What I am building next
-
-Intake Eval now includes a browser playground and a measured policy change. On 20 targeted synthetic cases, routing errors fell from five to zero. This is a small development result on provisional labels. Independent label review and evaluation on unseen cases, including summary correctness, remain open limitations.
-
-The [failure lab](https://leonbede7.github.io/intake-eval/reliability.html) adds reproducible local HTTP faults. It found a corrupt UTF-8 response that passed through permissive decoding; the adapter now rejects it. The report separates 14 contract checks from a known limitation: a false summary can still contain a real source quote. [Before/after evidence](https://github.com/leonbede7/intake-eval/blob/main/docs/reliability.md).
-
-The [human review workspace](https://leonbede7.github.io/intake-eval/review.html) makes the next step inspectable: assess the request before revealing the model, judge summary accuracy, and record a decision. It preserves initial assessments and revision history, with local saving and JSON export. Reviews start empty; no independent human evaluation is claimed.
-
-For a conversation about remote AI implementation or product work, connect with me on [LinkedIn](https://www.linkedin.com/in/leon-bede).
-
-## This portfolio
-
-The [website](https://leonbede7.github.io/leonbede7/) follows the work from my family's dealership into Galerija and AI evaluation. It uses a connected visual story, actual product screens and interactive 3D. The redesign was made with Codex, including concept artwork, implementation and testing. [Build notes](DEVELOPMENT.md) and [visual provenance](ASSETS.md) explain the process.
+The [portfolio](https://leonbede7.github.io/) shows each product at work, room by room, through one day in a dealership.

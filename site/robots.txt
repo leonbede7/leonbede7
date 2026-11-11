@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://leonbede7.github.io/leonbede7/sitemap.xml
